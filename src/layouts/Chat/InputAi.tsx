@@ -20,7 +20,7 @@ interface IProps {
   theme?: any;
 }
 
-const InputAi: FC<IProps> = ({
+const InputAI: FC<IProps> = ({
     theme
 //   agentType = 'GENERAL',
 //   contextType = 'list',
@@ -411,4 +411,4 @@ const InputAi: FC<IProps> = ({
   );
 };
 
-export default memo(InputAi);
+export default memo(InputAI);
