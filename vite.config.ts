@@ -1,3 +1,4 @@
+import path from "path"
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
@@ -7,11 +8,11 @@ export default defineConfig({
     react(),
     federation({
       name: "remote_app",
-      filename: "remoteEntry.js", // 🔹 fijo para prod y dev
+      filename: "remoteEntry.js",
       exposes: {
-        './Button2': './src/Mini/Button.tsx'
+        './Button4': './src/Mini/FracttalAi.tsx'
       },
-      shared: ['react', 'react-dom']
+      shared: ['react', 'react-dom', 'react-redux']
     })
   ],
   build: {
@@ -41,5 +42,10 @@ export default defineConfig({
     headers: {
       'Access-Control-Allow-Origin': '*'
     }
-  }
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
