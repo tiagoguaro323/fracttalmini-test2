@@ -10,7 +10,7 @@ export default defineConfig({
       name: "remote_app",
       filename: "remoteEntry.js",
       exposes: {
-        './Button4': './src/Mini/FracttalAi.tsx'
+        './Button2': './src/Mini/FracttalAi.tsx'
       },
       shared: ['react', 'react-dom', 'react-redux']
     })
