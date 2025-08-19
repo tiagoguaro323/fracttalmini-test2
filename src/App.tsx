@@ -7,10 +7,6 @@ import { useTheme } from '@mui/material';
 function App() {
     const [count, setCount] = useState(0)
     const theme = useTheme();
-  // const theme = React.useMemo(() => {
-  //   const preferredType = configTheme || (prefersDarkMode ? 'dark' : 'light');
-  //   return customTheme(preferredType);
-  // }, [configTheme, prefersDarkMode]);
 
   return (
     <>
@@ -24,7 +20,6 @@ function App() {
         </p>
         <FracttalAi theme={theme} />
       </div>
-      {/* </ThemeProvider> */}
     </>
   )
 }

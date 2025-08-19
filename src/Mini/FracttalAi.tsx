@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
  
 import React, { useState } from 'react'
-import { Button, Menu, Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import AnimationAI from '@/Components/AnimationAI'
+import Chat from '@/layouts/Chat/Chat'
 
 interface FracttalAiProps {
   theme?: any
@@ -34,40 +35,9 @@ const FracttalAi: React.FC<FracttalAiProps> = ({ theme: externalTheme }) => {
     <>
       <CallToAction />
       {openChat && (
-        <Menu
-          className="qa-insight-ai"
-          anchorReference="anchorPosition"
-          anchorPosition={{ top: 80, left: window.innerWidth - 520 }}
-          open
-          onClose={() => setOpenChat(false)}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-          slotProps={{
-            paper: {
-              sx: {
-                borderRadius: 2,
-                width: `calc(100vw - ${theme.spacing(2)})`,
-                maxWidth: 500,
-                height: '100%',
-                left: 'unset !important',
-                right: theme.spacing(1),
-                top: `${theme.spacing(9)} !important`,
-                maxHeight: `calc(100vh - ${theme.spacing(10)})`,
-                display: 'flex',
-                flexDirection: 'column',
-                ['@media (max-width:450px)']: {
-                  height: '90%',
-                },
-                '& .MuiMenu-list': {
-                  padding: 0,
-                  height: '100%',
-                  display: 'flex',
-                },
-              },
-            },
-          }}
-        >
-          test
-        </Menu>
+        <Chat theme={theme} setOpenChat={setOpenChat}>
+          Contenido del chat 2
+        </Chat>
       )}
     </>
   )

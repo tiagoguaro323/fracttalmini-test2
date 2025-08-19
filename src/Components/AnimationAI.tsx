@@ -8,7 +8,7 @@ interface IProps {
   variant?: 'ai' | 'wand';
 }
 
-const AnimationAI = React.memo<IProps>(({ color = 'main', variant = 'ai' }) => {
+const AnimationAI = React.memo<IProps>(({ color = 'main'}) => {
   const theme = useTheme();
   const colors = {
     main: 'brightness(0) invert(1)',
