@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { Menu, Paper } from '@mui/material'
-import Header from './Header'
-import InputAI from './InputAI'
-import Messages from './Messages'
+import Header from '@/layouts/Chat/Header'
+import InputAI from '@/layouts/Chat/InputAI'
+import Messages from '@/layouts/Chat/Messages'
 
 const Chat = ({ theme, setOpenChat }: any) => {
     return (
