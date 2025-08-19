@@ -5,7 +5,7 @@ import Header from './Header'
 import InputAI from './InputAI'
 import Messages from './Messages'
 
-const Chat = ({ theme, children, setOpenChat }: any) => {
+const Chat = ({ theme, setOpenChat }: any) => {
     return (
         <Menu
             className="qa-insight-ai"
