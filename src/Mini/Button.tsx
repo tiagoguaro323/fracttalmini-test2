@@ -1,8 +1,10 @@
+import ButtonCustom from '@/Internal/ButtonCustom'
+import '@/index.css'
 import React from 'react'
 
 const Button = () => {
   return (
-    <div style={{ color: 'red'}}>Button</div>
+    <ButtonCustom />
   )
 }
 
