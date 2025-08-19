@@ -13,7 +13,7 @@ const FracttalAi = ({theme}: any) => {
 
     return (
         <>
-            {/* <Button
+            <Button
                 variant="contained"
                 className="qa-fracttal-ai"
                 startIcon={<AnimationAI variant="ai" />}
@@ -23,7 +23,7 @@ const FracttalAi = ({theme}: any) => {
                 }}
             >
                 Remoto
-            </Button> */}
+            </Button>
             {/* <Button
         className="qa-fracttal-ai"
         variant="contained"
