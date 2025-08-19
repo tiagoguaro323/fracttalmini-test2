@@ -14,7 +14,6 @@ function App() {
 
   return (
     <>
-    {/* <ThemeProvider theme={theme}> */}
       <h1>Remote Fracttal Ai</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
