@@ -2,7 +2,7 @@
 import React from 'react'
 import { Menu, Paper } from '@mui/material'
 import Header from '@/layouts/Chat/Header'
-import InputAI from '@/layouts/Chat/InputAI'
+import InputGeneral from '@/layouts/Chat/InputGeneral'
 import Messages from '@/layouts/Chat/Messages'
 
 const Chat = ({ theme, setOpenChat }: any) => {
@@ -59,7 +59,7 @@ const Chat = ({ theme, setOpenChat }: any) => {
             >
                 <Header theme={theme} />
                 <Messages theme={theme} />
-                <InputAI theme={theme} />
+                <InputGeneral theme={theme} />
             </Paper>
         </Menu>
     )
