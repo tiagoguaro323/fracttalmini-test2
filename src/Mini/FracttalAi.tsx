@@ -10,9 +10,10 @@ interface FracttalAiProps {
   theme?: any
 }
 
-const FracttalAi: React.FC<FracttalAiProps> = ({ theme: externalTheme }) => {
+const FracttalAi: React.FC<FracttalAiProps> = ({ theme }) => {
   const defaultTheme = useTheme()
-  const theme = externalTheme || defaultTheme
+  console.log(theme)
+  // const theme = externalTheme || defaultTheme
   const [openChat, setOpenChat] = useState(false)
 
   const CallToAction = () => (

@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Menu, Paper } from '@mui/material'
 import React from 'react'
+import { Menu, Paper } from '@mui/material'
 import Header from './Header'
+import InputAI from './InputAI'
+import Messages from './Messages'
 
 const Chat = ({ theme, children, setOpenChat }: any) => {
     return (
@@ -15,7 +17,7 @@ const Chat = ({ theme, children, setOpenChat }: any) => {
             slotProps={{
                 paper: {
                     sx: {
-                        borderRadius: 2,
+                        borderRadius: 4,
                         width: `calc(100vw - ${theme.spacing(2)})`,
                         maxWidth: 500,
                         height: '100%',
@@ -56,7 +58,8 @@ const Chat = ({ theme, children, setOpenChat }: any) => {
                 }}
             >
                 <Header theme={theme} />
-                {children}
+                <Messages theme={theme} />
+                <InputAI theme={theme} />
             </Paper>
         </Menu>
     )
