@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
- 
+
 import React, { useState } from 'react'
 import { Button, Typography } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
 import AnimationAI from '@/Components/AnimationAI'
 import Chat from '@/layouts/Chat/Chat'
 
@@ -11,25 +10,28 @@ interface FracttalAiProps {
 }
 
 const FracttalAi: React.FC<FracttalAiProps> = ({ theme }) => {
-  const defaultTheme = useTheme()
   console.log(theme)
-  // const theme = externalTheme || defaultTheme
   const [openChat, setOpenChat] = useState(false)
 
   const CallToAction = () => (
     <Button
       variant="contained"
       className="qa-fracttal-ai"
-      startIcon={<AnimationAI variant="ai" />}
       onClick={() => setOpenChat(true)}
+      startIcon={!theme?.isMobile ? <AnimationAI variant="ai" /> : undefined}
       sx={{
-        borderRadius: 4.5,
+        borderRadius: theme?.isMobile ? 5 : 4.5,
         background: theme?.palette?.ai?.backgroundPrimary ?? theme.palette.primary.main,
         height: 40,
+        width: theme?.isMobile ? 40 : undefined,
+        minWidth: theme?.isMobile ? 40 : undefined,
       }}
     >
-      <Typography>AI</Typography>
+      {
+        !theme?.isMobile ? <Typography>AI</Typography> : <AnimationAI variant="ai" />
+      }
     </Button>
+
   )
 
   return (
